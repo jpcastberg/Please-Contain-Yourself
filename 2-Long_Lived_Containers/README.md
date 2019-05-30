@@ -39,7 +39,7 @@ That message displayed in your browser is being served from the container you ju
 
 ---
 
-- [ ] Let's also experiment to see what logs when we run `docker ps -a`. If you just came from the first module then you should see something like this:
+- [X] Let's also experiment to see what logs when we run `docker ps -a`. If you just came from the first module then you should see something like this:
 
 ![dockerpsa](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/2/dockerpsa.png?raw=true)
 
@@ -75,7 +75,7 @@ Then, when you want to make a container out of it, you simply map the container'
 
 `-d` : This command indicates that you want to run your container in a detached state; which means it just runs in the background. Keep reading for more information on this ->
 
-- [ ] Try spinning up another webserver on the host's port 100 without the ` -d` flag to see what happens:
+- [X] Try spinning up another webserver on the host's port 100 without the ` -d` flag to see what happens:
 
 `docker run -p 100:80 --name webserver2 nginx`
 
@@ -85,29 +85,29 @@ If it's not immediately obvious, notice that the terminal is not ready to accept
 
 ![dockerlog](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/2/dockerlog.png?raw=true)
 
-- [ ] Visit `localhost:100` in your browser and then return to your terminal. You will see that it logged information about your visit from inside the container:
+- [X] Visit `localhost:100` in your browser and then return to your terminal. You will see that it logged information about your visit from inside the container:
 
 ![dockervisit](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/2/dockervisit.png?raw=true)
 
-- [ ] To exit press 'ctrl+C'. This stops the container. Visiting 'localhost:100' will give you an error. Run `docker ps -a` and you will see that 'webserver2' has the status of 'Exited':
+- [X] To exit press 'ctrl+C'. This stops the container. Visiting 'localhost:100' will give you an error. Run `docker ps -a` and you will see that 'webserver2' has the status of 'Exited':
 
 ![dockerexit](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/2/dockerexit.png?raw=true)
 
-- [ ] Great! The next important thing we need to be able to do with containers is start and stop them whenever we want. To stop our first webserver container which is still running, run `docker stop webserver`
+- [X] Great! The next important thing we need to be able to do with containers is start and stop them whenever we want. To stop our first webserver container which is still running, run `docker stop webserver`
 
 You can confirm that it is no longer running in several ways. For example, visiting `localhost:80` in your browser will give you an error, running `docker ps` will show no running containers on your machine, `docker ps -a` will show 'webserver' with a status of 'Exited', and `docker info` will report no running containers.
 
-- [ ] Since the container is still present on our machine (just stopped) we can restart it anytime with the command `docker start <container-name>`. Go ahead and restart webserver2 by running `docker start webserver2`
+- [X] Since the container is still present on our machine (just stopped) we can restart it anytime with the command `docker start <container-name>`. Go ahead and restart webserver2 by running `docker start webserver2`
 
 **We are currently referencing containers by their associated names, but you can also reference them by their provided ID's**
 
-- [ ] Confirm 'webserver2' is up and running however you see fit
+- [X] Confirm 'webserver2' is up and running however you see fit
 
-- [ ] Next, we're going learn how to do some housekeeping. We are all done with these containers and images so lets clean them up and get rid of them. Run `docker rm webserver`; this will delete the stopped 'webserver' container from your machine
+- [X] Next, we're going learn how to do some housekeeping. We are all done with these containers and images so lets clean them up and get rid of them. Run `docker rm webserver`; this will delete the stopped 'webserver' container from your machine
 
-- [ ] Next run `docker ps -a` and notice that ‘webserver’ is nowhere to be found!
+- [X] Next run `docker ps -a` and notice that ‘webserver’ is nowhere to be found!
 
-- [ ] Next try to run `docker rm webserver2` **This command should fail if webserver2 is still up and running** the failure message should look similar to this:
+- [X] Next try to run `docker rm webserver2` **This command should fail if webserver2 is still up and running** the failure message should look similar to this:
 
 ```sh
 Error response from daemon: You cannot remove a running container 6bae1bae658c155fb6c4bcdf8fc3211d8d37816ca4790e50bf0b855d270fe738. Stop the container before attempting removal or use -f
@@ -115,7 +115,7 @@ Error response from daemon: You cannot remove a running container 6bae1bae658c15
 
 **You need to keep this in mind when deleting containers - a container has to be stopped to remove it**
 
-- [ ] As the error message implies, there is a shortcut around this. Run `docker rm -f webserver2`. The ` -f` will 'force' it to stop and then remove it. Try it out and then run `docker ps -a` to confirm that it's gone
+- [X] As the error message implies, there is a shortcut around this. Run `docker rm -f webserver2`. The ` -f` will 'force' it to stop and then remove it. Try it out and then run `docker ps -a` to confirm that it's gone
 
 ---
 >One handy little trick that can save some time is to just create containers that delete themselves when stopped. This is great for short lived containers as well as long lived containers that you only need temporarily.
