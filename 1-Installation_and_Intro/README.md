@@ -20,11 +20,11 @@ Text that looks `like this --for --example` are commands that you should type in
 
 First things first, let's install Docker:
 
-- [ ] Go to [Docker's website](https://www.docker.com/products/docker) and download the version that's appropriate for your operating system
+- [X] Go to [Docker's website](https://www.docker.com/products/docker) and download the version that's appropriate for your operating system
 
-- [ ] After you've dragged Docker into your Applications, find Docker in your Applications and click it to complete the installation
+- [X] After you've dragged Docker into your Applications, find Docker in your Applications and click it to complete the installation
 
-- [ ] Check to make sure everything worked correctly. Open up the terminal and type `docker --version`
+- [X] Check to make sure everything worked correctly. Open up the terminal and type `docker --version`
 
 You should see something like:
 ```sh
@@ -36,7 +36,7 @@ as long as it's NOT:
 ```
 If it looks like that then something went wrong with the download or installation. Oops.
 
-- [ ] Nice! Let's run your first Docker command! In the terminal type `docker info`
+- [X] Nice! Let's run your first Docker command! In the terminal type `docker info`
 
 You should see something like this: 
 
@@ -46,7 +46,7 @@ You should see something like this:
 
 This should make a little more sense as we go along - we'll be revisiting this command to see how our actions affect this report.
 
-- [ ] Now we're going to actually use Docker to spin up our first container. Hold onto your butt. Type:
+- [X] Now we're going to actually use Docker to spin up our first container. Hold onto your butt. Type:
 
 `docker run hello-world`
 
@@ -66,11 +66,11 @@ Status: Downloaded newer image for hello-world:latest
 
 ---
 
-- [ ] Check to make sure that your hello-world container logged the following: 
+- [X] Check to make sure that your hello-world container logged the following: 
 
 ![dockerhello](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/1/dockerhello.png?raw=true)
 
-- [ ] Congratulations!! If you've made it this far you have just created your first Docker container! Don't believe me? Check out `docker info` again, you should see this at the top of the report:
+- [X] Congratulations!! If you've made it this far you have just created your first Docker container! Don't believe me? Check out `docker info` again, you should see this at the top of the report:
 ```sh
 $ docker info
 Containers: 1
