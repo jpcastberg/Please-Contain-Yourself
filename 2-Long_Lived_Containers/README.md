@@ -128,11 +128,11 @@ Error response from daemon: You cannot remove a running container 6bae1bae658c15
 
 ---
 
-- [ ] The next thing to do is to clear out our nginx image. Yes - for whatever reason we need to clean out our perfect sandwich from the fridge. Maybe the refrigerator is just too full. Anyways, to delete an image from your machine run `docker rmi <image-name>` (`<image-name>` in this instance being 'nginx', of course)
+- [X] The next thing to do is to clear out our nginx image. Yes - for whatever reason we need to clean out our perfect sandwich from the fridge. Maybe the refrigerator is just too full. Anyways, to delete an image from your machine run `docker rmi <image-name>` (`<image-name>` in this instance being 'nginx', of course)
 
-- [ ] Confirm that the 'nginx' image is gone by running `docker images`. It seems that only the 'hello-world' image remains...
+- [X] Confirm that the 'nginx' image is gone by running `docker images`. It seems that only the 'hello-world' image remains...
 
-- [ ] It's time for the 'hello-world' image to meet its maker. Run `docker rmi hello-world`
+- [X] It's time for the 'hello-world' image to meet its maker. Run `docker rmi hello-world`
 
 **But wait! It looks like this image isn't going down without a fight! An error appears that looks like this:**
 
@@ -151,7 +151,7 @@ Looks like you're going to have to get rid of your 'hello-world' containers! The
 
 ---
 
-- [ ] You know the drill, `docker rm <container-name>` all of those stopped  'hello-world' containers. Bunch of lazy containers - just sitting around, taking up space, not doing nothin'
+- [X] You know the drill, `docker rm <container-name>` all of those stopped  'hello-world' containers. Bunch of lazy containers - just sitting around, taking up space, not doing nothin'
 
 ---
 >Pro-Tip: save time by running `docker rm` just once. Simply follow the command with all the container names you would like to remove, like so:
@@ -160,7 +160,7 @@ Looks like you're going to have to get rid of your 'hello-world' containers! The
 
 ---
 
-- [ ] Try to remove the 'hello-world' image one more time, using `docker images` and `docker info` to confirm that it's gone. Your 'docker info' report should show that everything is as immaculate as when you first installed Docker:
+- [X] Try to remove the 'hello-world' image one more time, using `docker images` and `docker info` to confirm that it's gone. Your 'docker info' report should show that everything is as immaculate as when you first installed Docker:
 
 ![dockerclear](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/2/dockerclear.png?raw=true)
 
