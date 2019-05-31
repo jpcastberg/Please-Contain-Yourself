@@ -70,9 +70,9 @@ That is how we're going to approach bundling our app into an image. We're going 
 
 The base image our Dockerfile recipe will use to build our custom image is going to be the 'node:latest' image that we just pulled down from Dockerhub. Built into this image is everything we need to run a node app. Sounds tasty, so let's add it to our Dockerfile. 
 
-- [ ] Open up the Dockerfile in Module 3's directory and under the comment '# What image do you want to start building on?' type `FROM node:latest`
+- [X] Open up the Dockerfile in Module 3's directory and under the comment '# What image do you want to start building on?' type `FROM node:latest`
 
-- [ ] Under the comment '# Make a folder in your image where your app's source code can live'  type `RUN mkdir -p /src/app`
+- [X] Under the comment '# Make a folder in your image where your app's source code can live'  type `RUN mkdir -p /src/app`
 
 >`mkdir` : Creates a directory
 >
@@ -80,11 +80,11 @@ The base image our Dockerfile recipe will use to build our custom image is going
 >
 >`/src/app` : The path of the directory you are creating
 
-- [ ] Under the comment '# Tell your container where your app's source code will live' type `WORKDIR /src/app`
+- [X] Under the comment '# Tell your container where your app's source code will live' type `WORKDIR /src/app`
 
 >As the comment implies, this command tells your container which directory is the working directory
 
-- [ ] Under the comment '# What source code do you what to copy, and where to put it?' type `COPY . /src/app`
+- [X] Under the comment '# What source code do you what to copy, and where to put it?' type `COPY . /src/app`
 
 >`COPY` takes two arguments (It's a little hard to tell, but ` . ` and `/src/app` are separated by a space)
 >
@@ -92,15 +92,15 @@ The base image our Dockerfile recipe will use to build our custom image is going
 >
 >`/src/app` is the second argument and in this case refers to the directory inside of the image that we just made a few commands ago - the working directory where we want the app's source code to live and where the source code is going to be copied to.
 
-- [ ] Under the comment '# Does your app have any dependencies that should be installed?' type `RUN yarn install`.
+- [X] Under the comment '# Does your app have any dependencies that should be installed?' type `RUN yarn install`.
 
 >This installs all the dependencies necessary to run our node application using the yarn package manager (which was included as part of the base image, conveniently enough). You might have noticed the .dockerignore file in this repo; I won't get in depth into what it does in this guide - you can research it if you're curious. But a quick explanation of it's purpose is that it prevents any previously installed node modules in the directory from being copied into the image. This guarantees all dependencies come from the `RUN yarn install` command rather than inadvertently copied from elsewhere. 
 
-- [ ] Under the comment '# What port will the container talk to the outside world with once created?' type `EXPOSE 3000`
+- [X] Under the comment '# What port will the container talk to the outside world with once created?' type `EXPOSE 3000`
 
 >This command will expose the container's port 3000 which will need to be mapped to a port on the host when spun into a container by using the ` -p` option with the `docker run` command
 
-- [ ] Under the comment '# How do you start your app?' type `CMD [ "npm", "start" ]`
+- [X] Under the comment '# How do you start your app?' type `CMD [ "npm", "start" ]`
 
 > This command tells the image to run the command `npm start` from inside the container once it is created, which will start our application inside the newly spun-up container
 
