@@ -104,7 +104,7 @@ The base image our Dockerfile recipe will use to build our custom image is going
 
 > This command tells the image to run the command `npm start` from inside the container once it is created, which will start our application inside the newly spun-up container
 
-- [ ] Great! Those are all the steps we need to build an image with our app inside and ready to run once spun into a container. Check to make sure your Dockerfile looks like so:
+- [X] Great! Those are all the steps we need to build an image with our app inside and ready to run once spun into a container. Check to make sure your Dockerfile looks like so:
 
 ```sh
 # What image do you want to start building on?
@@ -130,7 +130,7 @@ CMD [ "npm", "start" ]
 
 ```
 
-- [ ] Once everything checks out, it's time to finally build this thing. Run the command `docker build -t nodeserver .`
+- [X] Once everything checks out, it's time to finally build this thing. Run the command `docker build -t nodeserver .`
 
 **The ` . ` in the `docker build` command is a relative filepath that refers to the location of the Dockerfile you want to build. As such, MAKE SURE you are cd'd into the directory with said Dockerfile before running this command.**
 
@@ -140,7 +140,7 @@ After some logging to the terminal, you should see a message similar to this:
 Successfully built 7e69d61fd488
 ```
 
-- [ ] Congrats! You've built an image with our application inside it! Before we play with this image, let's break down the command we used to build the image:
+- [X] Congrats! You've built an image with our application inside it! Before we play with this image, let's break down the command we used to build the image:
 
 ```sh
 docker build -t nodeserver .
@@ -154,7 +154,7 @@ docker build -t nodeserver .
 
 ` . ` : The relative path to the Dockerfile that we want to build into an image
 
-- [ ] You can see that our nodeserver image is chillin' safe and sound on our machine by running `docker images`
+- [X] You can see that our nodeserver image is chillin' safe and sound on our machine by running `docker images`
 
 ![dockerimage](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/3/dockerimage.png?raw=true)
 
