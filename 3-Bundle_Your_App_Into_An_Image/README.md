@@ -20,7 +20,7 @@ Text that looks `like this --for --example` are commands that you should type in
 
 - [ ] If you have not already cloned this repo onto your computer, do so now. You will be making use of files in this repo during this module
 
-- [ ] `cd` into the repo and then `cd` into the directory '/3-Bundle_Your_App_Into_An_Image'
+- [X] `cd` into the repo and then `cd` into the directory '/3-Bundle_Your_App_Into_An_Image'
 
 ---
 >If you haven't already guessed - this repo comes with a little app that we're going to containerize with Docker. The app uses node.js and express to create a server that assigns itself a random number and then serves that random number to whoever asks for it.
@@ -48,13 +48,13 @@ So, if you were to build a bare bones image, your recipe (Dockerfile) would tell
 
 Let's get a little more familiar with layers. The images that we have used thus far were built from layers, but you didn't write the recipe (Dockerfile) for the sandwich (image), so you don't really know what the image is made of. But that's okay - this process abstracts away a lot of the complexity needed to build useful containers. You can, however get a feel for how many layers were abstracted away from you in a particular image when downloading one.
 
-- [ ] Try this exercise: run the command `docker pull node:latest`
+- [X] Try this exercise: run the command `docker pull node:latest`
 
 You will see that, in the process of pulling the node image down from Dockerhub, it lists out all the images that image is built from as it downloads
 
 ![dockerpull](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/3/dockerpull.png?raw=true)
 
-- [ ] When the image is successfully cached on your machine, run the command `docker history node:latest` This command is used in conjunction with an image name and shows the build history of the image; you can look at the 'CREATED BY' column to see the the actual ingredient in each layer of the sandwich (stated more technically - you can see the command that added each layer to the image)
+- [X] When the image is successfully cached on your machine, run the command `docker history node:latest` This command is used in conjunction with an image name and shows the build history of the image; you can look at the 'CREATED BY' column to see the the actual ingredient in each layer of the sandwich (stated more technically - you can see the command that added each layer to the image)
 
 ![dockerhist](https://github.com/dylanlrrb/P-C-Y-Assets/blob/master/3/dockerhist.png?raw=true)
 
